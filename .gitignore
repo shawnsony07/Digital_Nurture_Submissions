@@ -1,0 +1,21 @@
+# Automation Scripts
+# These are Python scripts used to rapidly generate boilerplate code and project structures.
+*.py
+
+# Parsed Requirement Files
+# These are plain-text extractions from the original .docx files, making it easier to read the course requirements.
+*.txt
+
+# Tracker Files
+# This is a CSV version of the original "DN - Java FSE Mandatory hands-on detail.xlsx" to keep track of mandatory exercises.
+*.csv
+
+# Standard Java/Maven ignores
+out/
+target/
+*.class
+.settings/
+.classpath
+.project
+.idea/
+*.iml
