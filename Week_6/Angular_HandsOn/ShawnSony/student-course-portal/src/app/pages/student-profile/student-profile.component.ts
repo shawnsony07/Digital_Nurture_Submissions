@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
   `
 })
 export class StudentProfileComponent {
-  enrolledCourses = [];
+  enrolledCourses: any[] = [];
   constructor(private enrollmentService: EnrollmentService) {
     // this.enrolledCourses = this.enrollmentService.getEnrolledCourses();
   }

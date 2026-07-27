@@ -10,15 +10,15 @@ import { CreditLabelPipe } from '../../pipes/credit-label.pipe';
   imports: [CommonModule, HighlightDirective, CreditLabelPipe],
   template: `
     <div appHighlight="lightblue" [ngClass]="cardClasses" [ngStyle]="{'border-left': gradeColor}">
-      <h3>{{ course?.name }}</h3>
-      <p>Code: {{ course?.code }}</p>
-      <p>{{ course?.credits | creditLabel }}</p>
-      <div [ngSwitch]="course?.gradeStatus">
+      <h3>{{ course.name }}</h3>
+      <p>Code: {{ course.code }}</p>
+      <p>{{ course.credits | creditLabel }}</p>
+      <div [ngSwitch]="course.gradeStatus">
         <span *ngSwitchCase="'passed'" style="color:green">Passed</span>
         <span *ngSwitchCase="'failed'" style="color:red">Failed</span>
         <span *ngSwitchCase="'pending'" style="color:grey">Pending</span>
       </div>
-      <button (click)="enrollRequested.emit(course?.id)">Enroll</button>
+      <button (click)="enrollRequested.emit(course.id)">Enroll</button>
       <button (click)="isExpanded = !isExpanded">Show Details</button>
     </div>
   `,
@@ -34,15 +34,15 @@ export class CourseCardComponent implements OnChanges {
   isExpanded = false;
 
   get gradeColor() {
-    if (this.course?.gradeStatus === 'passed') return 'green';
-    if (this.course?.gradeStatus === 'failed') return 'red';
+    if (this.course.gradeStatus === 'passed') return 'green';
+    if (this.course.gradeStatus === 'failed') return 'red';
     return 'grey';
   }
 
   get cardClasses() {
     return {
       'card--enrolled': false,
-      'card--full': this.course?.credits >= 4,
+      'card--full': this.course.credits >= 4,
       'expanded': this.isExpanded
     };
   }
