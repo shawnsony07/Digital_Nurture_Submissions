@@ -1,0 +1,18 @@
+/* Header styles */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#welcomeBanner { background: linear-gradient(to right, #007BFF, #0056b3); }
+h2 { color: #333; }
+.event-img { border: 2px solid #ddd; width: 150px; }
+a:link, a:visited { color: blue; text-decoration: none; }
+a:hover { color: darkblue; }
+table, th, td { border: 1px solid black; border-collapse: collapse; text-align: center; }
+tr:nth-child(even) { background-color: #f2f2f2; }
+.highlight { outline: 2px solid yellow; }
+@media (max-width: 768px) {
+    nav a { display: block; }
+}

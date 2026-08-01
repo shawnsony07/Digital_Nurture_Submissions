@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Event Portal</title>
+    <!-- CSS3 Module Linking -->
+    <link rel="stylesheet" href="../CSS3/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#events">Events</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+    
+    <!-- Welcome Message -->
+    <div id="welcomeBanner" style="background-color: blue; color: white; padding: 10px;">
+        <h2>Welcome to the Portal</h2>
+        <span style="color: red; font-weight: bold;" class="highlight">Special Offer!</span>
+    </div>
+
+    <!-- Image Gallery -->
+    <section id="events">
+        <table>
+            <tr>
+                <td><img src="event1.jpg" alt="Music" class="event-img"><br>Music Event</td>
+                <td><img src="event2.jpg" alt="Art" class="event-img"><br>Art Exhibit</td>
+                <td><img src="event3.jpg" alt="Tech" class="event-img"><br>Tech Meetup</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <form id="regForm">
+        <input type="text" placeholder="Name" required autofocus>
+        <input type="email" placeholder="Email" required>
+        <input type="date" required>
+        <select><option>Music</option><option>Art</option></select>
+        <textarea placeholder="Message"></textarea>
+        <button type="button" onclick="alert('Confirmed')">Submit</button>
+        <output id="confirmMsg"></output>
+    </form>
+
+    <!-- Video -->
+    <video src="promo.mp4" controls oncanplay="alert('Video ready')"></video>
+
+    <button onclick="navigator.geolocation.getCurrentPosition(pos => alert(pos.coords.latitude))">Find Nearby</button>
+    <script src="../JavaScript/main.js"></script>
+</body>
+</html>
